@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+body {
+    background-image: url('../img/mountains.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.cars-card {
+    width: min(100%, 620px);
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 36px rgba(35, 61, 88, 0.15); 
+    
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #245b91;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0 0 28px;
+    color: #657383;
+    line-height: 1.5;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 700;
+}
+
+select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #bdc9d6;
+    border-radius: 8px;
+    background: #fff;
+    color: #202a35;
+    font-size: 16px;
+}
+
+select:focus,
+button:focus-visible {
+    outline: 3px solid rgba(36, 91, 145, 0.25);
+    outline-offset: 2px;
+}
+
+.status {
+    margin: 18px 0;
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.status--info {
+    background: #eef4fa;
+    color: #315a7e;
+}
+
+.status--success {
+    background: #e8f6ed;
+    color: #24683b;
+}
+
+.status--error {
+    background: #fff0f0;
+    color: #a12d2d;
+}
+
+.car-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e0e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.car-info[hidden],
+.status[hidden],
+button[hidden] {
+    display: none;
+}
+
+.car-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 72px;
+    height: 72px;
+    border-radius: 12px;
+    background: #e1edf8;
+    font-size: 36px;
+}
+
+.car-info h2 {
+    margin: 0 0 12px;
+    color: #245b91;
+}
+
+.car-info p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.info-label {
+    color: #657383;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #245b91;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #194675;
+}
+
+@media (max-width: 520px) {
+    .cars-card {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .car-info {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .car-icon {
+        flex-basis: 52px;
+        height: 52px;
+        font-size: 27px;
+    }
+}

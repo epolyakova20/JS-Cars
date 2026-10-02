@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars — каталог автомобилей</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <main class="main-container">
+        <section class="cars-card">
+            <h1>Каталог автомобилей</h1>
+            <p class="subtitle">Выберите автомобиль, чтобы посмотреть информацию о нём.</p>
+
+            <div class="field">
+                <label for="cars-select">Автомобиль</label>
+                <select id="cars-select" disabled>
+                    <option value="">Загрузка автомобилей...</option>
+                </select>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">
+                Загружаем данные...
+            </p>
+
+            <section id="car-info" class="car-info" hidden aria-live="polite">
+                <div class="car-icon" aria-hidden="true">🚘</div>
+                <div>
+                    <h2 id="car-title"></h2>
+                    <p><span class="info-label">Марка:</span> <span id="car-brand"></span></p>
+                    <p><span class="info-label">Модель:</span> <span id="car-model"></span></p>
+                    <p class="price"><span class="info-label">Цена:</span> <span id="car-price"></span></p>
+                </div>
+            </section>
+
+            <button id="retry-button" type="button" hidden>Попробовать ещё раз</button>
+        </section>
+    </main>
+</body>
+</html>
